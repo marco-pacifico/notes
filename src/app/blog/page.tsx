@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function BlogPage() {
   return (
     <main>
-      <h1>Blog Page</h1>
+      <h1 className="text-2xl font-semibold tracking-tighter">Blog Page</h1>
       <p>List of blog posts</p>
       <ul>
         {POSTS.map((post) => (
