@@ -1,12 +1,12 @@
+import HGroup from "./components/hgroup";
+
 export default function Home() {
   return (
-    <main>
-      <hgroup>
-        <h1 className="text-2xl font-semibold tracking-tighter font-serif">
-          Notes To Self
-        </h1>
-        <p>A simple blog to keep track of my thoughts and ideas.</p>
-      </hgroup>
-    </main>
+    <>
+      <HGroup
+        heading={"Notes To Self"}
+        paragraph={"A simple blog to keep track of my thoughts and ideas."}
+      />
+    </>
   );
 }

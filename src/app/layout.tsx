@@ -16,7 +16,7 @@ const DMSans = localFont({
     { path: "./fonts/DMSans-Bold.woff2", weight: "700", style: "normal" },
   ],
   display: "swap",
-  variable: "--font-dm-sans"
+  variable: "--font-dm-sans",
 });
 
 const Louize = localFont({
@@ -26,11 +26,8 @@ const Louize = localFont({
     { path: "./fonts/Louize-Regular.woff", weight: "400", style: "normal" },
   ],
   display: "swap",
-  variable: "--font-louize"
+  variable: "--font-louize",
 });
-
-
-
 
 export default function RootLayout({
   children,
@@ -41,7 +38,7 @@ export default function RootLayout({
     <html lang="en" className={`${DMSans.variable} ${Louize.variable}`}>
       <body>
         <Header />
-        {children}
+        <main className="p-40">{children}</main>
       </body>
     </html>
   );
@@ -49,10 +46,14 @@ export default function RootLayout({
 
 function Header() {
   return (
-    <header className="p-6" >
+    <header className="p-6">
       <nav className="flex gap-4 justify-center">
-        <Link className="font-bold" href="/">Home</Link>
-        <Link className="font-bold" href="/blog">Blog</Link>
+        <Link className="font-bold" href="/">
+          Home
+        </Link>
+        <Link className="font-bold" href="/blog">
+          Blog
+        </Link>
       </nav>
     </header>
   );

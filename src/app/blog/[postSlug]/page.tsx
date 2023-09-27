@@ -1,14 +1,18 @@
 import Link from "next/link";
+import HGroup from "@/app/components/hgroup";
+
 export default function BlogPostPage({
   params,
 }: {
   params: { postSlug: string };
 }) {
   return (
-    <div>
+    <>
       <Link href="/blog">Back</Link>
-      <h1>Blog Post Page</h1>
-      <p>Blog post content for {params.postSlug}</p>
-    </div>
+      <HGroup
+        heading={"Blog Post Page"}
+        paragraph={`Blog post content for ${params.postSlug}`}
+      />
+    </>
   );
 }
