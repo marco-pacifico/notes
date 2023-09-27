@@ -16,8 +16,20 @@ const DMSans = localFont({
     { path: "./fonts/DMSans-Bold.woff2", weight: "700", style: "normal" },
   ],
   display: "swap",
-  variable: "--font-sans"
+  variable: "--font-dm-sans"
 });
+
+const Louize = localFont({
+  src: [
+    { path: "./fonts/Louize-Bold.woff", weight: "700", style: "normal" },
+    { path: "./fonts/Louize-Medium.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/Louize-Regular.woff", weight: "400", style: "normal" },
+  ],
+  display: "swap",
+  variable: "--font-louize"
+});
+
+
 
 
 export default function RootLayout({
@@ -26,16 +38,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={DMSans.className}>
-        <header>
-          <nav>
-            <Link href="/">Home</Link>
-            <Link href="/blog">Blog</Link>
-          </nav>
-        </header>
+    <html lang="en" className={`${DMSans.variable} ${Louize.variable}`}>
+      <body>
+        <Header />
         {children}
       </body>
     </html>
+  );
+}
+
+function Header() {
+  return (
+    <header className="p-6" >
+      <nav className="flex gap-4 justify-center">
+        <Link className="font-bold" href="/">Home</Link>
+        <Link className="font-bold" href="/blog">Blog</Link>
+      </nav>
+    </header>
   );
 }
