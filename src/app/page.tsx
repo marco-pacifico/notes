@@ -1,12 +1,10 @@
-import HGroup from "./components/hgroup";
+import HGroup from "@/components/hgroup";
+import { Hero } from "@/components/hero";
 
 export default function Home() {
   return (
     <>
-      <HGroup
-        heading={"Notes To Self"}
-        paragraph={"A simple blog to keep track of my thoughts and ideas."}
-      />
+      <Hero />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HGroup from "@/app/components/hgroup";
+import HGroup from "@/components/hgroup";
 
 export default function BlogPostPage({
   params,

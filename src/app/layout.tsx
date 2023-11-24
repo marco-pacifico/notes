@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import localFont from "next/font/local";
+import { GridBackground } from "@/components/gridbackground";
 
 export const metadata: Metadata = {
   title: "Notes To Self",
@@ -37,8 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${DMSans.variable} ${Louize.variable}`}>
       <body>
+        {/* <GridBackground/> */}
         <Header />
-        <main className="p-40">{children}</main>
+        <main className="p-40 isolate">{children}</main>
       </body>
     </html>
   );
@@ -46,7 +48,7 @@ export default function RootLayout({
 
 function Header() {
   return (
-    <header className="p-6">
+    <header className="p-6 isolate">
       <nav className="flex gap-4 justify-center">
         <Link className="font-bold" href="/">
           Home
